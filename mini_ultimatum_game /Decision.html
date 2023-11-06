@@ -1,0 +1,34 @@
+{% block content %}
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="alert alert-primary">
+              <p>Player 1 has chosen to send  <strong>{{ player1_offer }}</strong> to Player 2</p>
+          </div>
+
+          <h2 class="mt-4">Your Decision</h2>
+          <p>
+              As Player 3, your role is to decide whether to punish Player 1 based on their offer to Player 2.
+          </p>
+
+          <h3 class="mt-4">Consequences of Your Decision</h3>
+          <p>
+              If you decide to punish Player 1, both Player 1 and Player 2 will not receive any earnings.
+          </p>
+
+          <p class="mt-4">
+              If you opt not to punish Player 1, both Player 1 and Player 2 will receive payments as follows:
+          </p>
+          <ul class="list-group list-group-numbered">
+              <li class="list-group-item">Player 1's Payment = <strong>{{ endowment }} - {{ group.offer }}</strong></li>
+              <li class="list-group-item">Player 2's Payment = <strong>{{ group.offer }}</strong></li>
+          </ul>
+
+          <div class="text-center mt-4">
+              {{ formfields }}
+              {{ next_button }}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
