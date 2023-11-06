@@ -1,0 +1,10 @@
+# This is a requirements.txt file for an oTree project
+
+# oTree: The main oTree package
+# oTree-may-overwrite-this-file
+# IF YOU MODIFY THIS FILE, remove this comment.
+# otherwise, oTree will automatically overwrite it.
+otree>=5.0.0
+psycopg2>=2.8.4
+
+# Database adapter for SQLite 3
