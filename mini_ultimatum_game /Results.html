@@ -1,0 +1,59 @@
+{% block content %}
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="alert alert-primary">
+            <h2 class="text-center">Thank you for participating</h2>
+          </div>
+          <table class="table table-bordered table-striped table-hover">
+              <tbody>
+                  {% if player.id_in_group == 1 %}
+                  <tr>
+                      <th colspan="2" class="text-center">Player 1</th>
+                  </tr>
+                  <tr>
+                      <td>The amount you decided to send to Player 2</td>
+                      <td>{{ player1_offer }}</td>
+                  </tr>
+                  <tr>
+                      <td>The decision that Player 3 made</td>
+                      <td>{% if group.punish_decision %} Punish {% else %} Not Punish {% endif %}</td>
+                  </tr>
+                  <tr>
+                      <td>Your payout</td>
+                      <td><strong>{{ player1_payout }}</strong></td>
+                  </tr>
+                  {% endif %}
+
+                  {% if player.id_in_group == 2 %}
+                  <tr>
+                      <th colspan="2" class="text-center">Player 2</th>
+                  </tr>
+                  <tr>
+                      <td>The amount Player 1 decided to send you</td>
+                      <td>{{ player2_offer }}</td>
+                  </tr>
+                  <tr>
+                      <td>The decision that Player 3 made</td>
+                      <td>{% if group.punish_decision %} Punish {% else %} Not Punish {% endif %}</td>
+                  </tr>
+                  <tr>
+                      <td>Your payout</td>
+                      <td><strong>{{ player2_payout }}</strong></td>
+                  </tr>
+                  {% endif %}
+              </tbody>
+          </table>
+          <hr class="mt-4 mb-3">
+          <div>
+            <p>
+              Thank you for your participation in the MUG Game. We kindly request your input on a few additional questions to help us gain valuable insights.
+            </p>
+            <div class="text-center">
+              {{ next_button }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
