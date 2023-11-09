@@ -59,4 +59,4 @@ To run this project, follow these steps:
    ```bash
    otree devserver
 4. Access the project in your web browser by opening the provided URL.
-5. Start the Mini Ultimatum Game with Exit Survey and invite participants to play.
+5. Start the Game with Exit Survey and invitation to play.
