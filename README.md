@@ -53,10 +53,13 @@ To run this project, follow these steps:
    cd your-project-directory
 
    # Install project dependencies (including oTree)
-   pip install -r requirements.txt
+   pip install -r requirements.txt in the environmant (env)
+   
    
 3. Run the oTree development server
    ```bash
+   otree #To see if otree is installed and recognized
+   
    otree devserver
 4. Access the project in your web browser by opening the provided URL.
 5. Start the Game with Exit Survey and invitation to play.
