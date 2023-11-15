@@ -51,6 +51,10 @@ To run this project, follow these steps:
 
    # Navigate to the project directory
    cd your-project-directory
+   python -m venv venv
+   
+   # Activate Environment
+   .\\venv\Scripts\activate.bat
 
    # Install project dependencies (including oTree)
    pip install -r requirements.txt in the environmant (env)
@@ -61,5 +65,6 @@ To run this project, follow these steps:
    otree #To see if otree is installed and recognized
    
    otree devserver
+   
 4. Access the project in your web browser by opening the provided URL.
 5. Start the Game with Exit Survey and invitation to play.
